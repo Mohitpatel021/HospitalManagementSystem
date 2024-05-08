@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="../../assets/css/nice-select.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="../../assets/css/icofont.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="../../assets/css/slicknav.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="../../assets/css/owl-carousel.css">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="../../assets/css/datepicker.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="../../assets/css/animate.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+</head>
+
+<body>
+
+    <div class="maincontainer ">
+        <header class="header">
+            <!-- Header Inner -->
+            <div class="header-inner">
+                <div class="container">
+                    <div class="inner">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <!-- Start Logo -->
+                                <div class="logo1">
+                                    <a href="#"><img src="../../assets/img/logo.png" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Header Inner -->
+        </header>
+    </div>
+    <div id="main-body">
+        <div class="box">
+            <div class="wrapper">
+                <div class="title">Registration</div>
+                <form (ngSubmit)="registerDoctor(registerForm)" #registerForm="ngForm">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <input type="text" id="username" name="username"
+                                    [(ngModel)]="commonRegisterRequest.username" required>
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="field">
+                                <input type="password" id="password" name="password"
+                                    [(ngModel)]="commonRegisterRequest.password" required>
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="field">
+                                <input type="text" id="phoneNumber" name="phoneNumber"
+                                    [(ngModel)]="commonRegisterRequest.phoneNumber" required>
+                                <label for="phoneNumber">Phone Number</label>
+                            </div>
+                            <div class="field">
+                                <input type="text" id="email" name="email" [(ngModel)]="commonRegisterRequest.email"
+                                    required>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <input type="text" id="gender" name="gender" [(ngModel)]="commonRegisterRequest.gender"
+                                    required>
+                                <label for="gender">Gender</label>
+                            </div>
+                            <div class="field">
+                                <input type="text" id="address" name="address"
+                                    [(ngModel)]="commonRegisterRequest.address" required>
+                                <label for="address">Address</label>
+                            </div>
+                            <div class="field">
+                                <input type="text" id="age" name="age" [(ngModel)]="commonRegisterRequest.age" required>
+                                <label for="age">Age</label>
+                            </div>
+                            <div class="role_container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <input type="radio" id="user" value="USER" name="role"
+                                            [(ngModel)]="commonRegisterRequest.role" required>
+                                        <label for="user">USER</label>
+                                        <input type="radio" id="doc" value="DOCTOR" name="role"
+                                            [(ngModel)]="commonRegisterRequest.role" required>
+                                        <label for="doc">DOCTOR</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="checkbox">
+                            <input type="checkbox" id="agree" name="agree" [(ngModel)]="agree" required>
+                            <label for="agree">I agree to terms and conditions</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="submit" value="Login" routerLink="/login"
+                                    style="width: 100%; height: 200% ;">
+                            </div>
+                            <div class="col-6">
+                                <input type="submit" id="submit" value="Sign Up" style="width: 100%; height: 200%;">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

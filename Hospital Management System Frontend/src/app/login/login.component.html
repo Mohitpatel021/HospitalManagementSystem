@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login Form Design | CodeLab</title>
+    <link rel="icon" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="../../assets/css/nice-select.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="../../assets/css/icofont.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="../../assets/css/slicknav.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="../../assets/css/owl-carousel.css">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="../../assets/css/datepicker.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="../../assets/css/animate.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+</head>
+
+<body id="main-body">
+    <div class="maincontainer ">
+        <header class="header">
+            <!-- Header Inner -->
+            <div class="header-inner">
+                <div class="container">
+                    <div class="inner">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <!-- Start Logo -->
+                                <div class="logo1">
+                                    <a href="#"><img src="../../assets/img/logo.png" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Header Inner -->
+        </header>
+    </div>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="title">
+                Login
+            </div>
+            <form (ngSubmit)="loginUser()" #loginData="ngForm">
+                <div class="field">
+                    <input type="text" id="username" name="username" [(ngModel)]="loginRequest.username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="field">
+                    <input type="password" id="password" name="password" [(ngModel)]="loginRequest.password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="content">
+                    <div class="checkbox">
+                        <input type="checkbox" id="remember-me" required>
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                    Not a member? <a routerLink="/register">Signup now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
