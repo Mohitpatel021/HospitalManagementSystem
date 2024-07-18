@@ -1,20 +1,10 @@
 package com.HMSApp.Hospital.Management.System.ServiceImpl;
 
-import com.HMSApp.Hospital.Management.System.DTO.JwtResponse;
-import com.HMSApp.Hospital.Management.System.DTO.LoginRequest;
-import com.HMSApp.Hospital.Management.System.DTO.UserDTO;
-import com.HMSApp.Hospital.Management.System.Entity.CommonRequest;
-import com.HMSApp.Hospital.Management.System.Entity.DoctorEntity;
-import com.HMSApp.Hospital.Management.System.Entity.Role;
-import com.HMSApp.Hospital.Management.System.Entity.UserRegisterEntity;
-import com.HMSApp.Hospital.Management.System.Exception.AuthenticationFailedException;
-import com.HMSApp.Hospital.Management.System.Exception.InternalServerException;
-import com.HMSApp.Hospital.Management.System.Repository.DoctorRepository;
-import com.HMSApp.Hospital.Management.System.Repository.UserRepository;
-import com.HMSApp.Hospital.Management.System.Service.JwtService;
-import com.HMSApp.Hospital.Management.System.Service.RegisterAndLoginService;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.management.relation.Role;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +12,19 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.HMSApp.Hospital.Management.System.Entity.CommonRequest;
+import com.HMSApp.Hospital.Management.System.Entity.DoctorEntity;
+import com.HMSApp.Hospital.Management.System.Entity.UserRegisterEntity;
+import com.HMSApp.Hospital.Management.System.Repository.DoctorRepository;
+import com.HMSApp.Hospital.Management.System.Repository.UserRepository;
+import com.HMSApp.Hospital.Management.System.DTO.JwtResponse;
+import com.HMSApp.Hospital.Management.System.DTO.LoginRequest;
+import com.HMSApp.Hospital.Management.System.DTO.UserDTO;
+import com.HMSApp.Hospital.Management.System.Exception.AuthenticationFailedException;
+import com.HMSApp.Hospital.Management.System.Exception.InternalServerException;
+import com.HMSApp.Hospital.Management.System.Service.JwtService;
+import com.HMSApp.Hospital.Management.System.Service.RegisterAndLoginService;
 
 @Service
 public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
@@ -127,7 +130,7 @@ public class RegisterAndLoginServiceImpl implements RegisterAndLoginService {
         loginRequest.getUsername(),
         loginRequest.getPassword()
       )
-    );
+    );  
 
     String jwtToken = null;
     JwtResponse jwtResponse = new JwtResponse();
